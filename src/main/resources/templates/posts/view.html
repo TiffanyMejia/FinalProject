@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+<h2 th:replace="fragments :: title"></h2>
+<h1 th:text="${title}">Default Title</h1>
+
+
+    <div class="container border">
+    <div class="posts">
+        <h2 th:text="${post.title}"></h2>
+        <br>
+        <br>
+        <div>
+            <label th:for="gameName">Name:</label>
+            <span th:text="*{post.gameName}"></span>
+        </div>
+
+        <div>
+            <label th:for="snake">Category:</label>
+            <span th:text="*{post.snake.category}"></span>
+        </div>
+
+        <div>
+            <label th:for="snake">Sub-Category:</label>
+            <span th:text="*{post.snake.name}"></span>
+        </div>
+
+        <div class="description">
+            <label th:for="description">Description:</label>
+            <span th:text="*{post.description}"></span>
+        </div>
+    </div>
+</div>
+<style>
+
+    label{
+    color:lime;
+    }
+    .description {
+     word-wrap: break-word;
+    }
+    .border {
+    border-style:solid;
+    border-color:lime;
+    border-width:2px;
+    border-spacing:20px;
+    }
+    .posts {
+    text-align:left;
+    color:white;
+    font-size:25px;
+    }
+    a {
+    color:white;
+    }
+    p{
+        color:white;
+
+    }
+</style>
+<footer th:replace="fragments :: footer"></footer>
+</html>
+

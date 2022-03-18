@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+<h2 th:replace="fragments :: title"></h2>
+<h1 th:text="${title}">Default Title</h1>
+
+<div class="container border">
+<h2 class="add-title"th:text="${heading}">Default Heading</h2>
+
+<div>
+<form method="post"th:object="${post}">
+    <div class="form-group">
+        <label th:for="title">Title of New Post:</label>
+        <input class="form-control"th:field="*{title}">
+        <span th:errors="*{title}" class="error"></span>
+
+    </div>
+
+
+    <div class="form-group">
+        <label th:for="gameName">Name:</label>
+        <input class="form-control"th:field="*{gameName}"placeholder="Name of the game">
+        <span th:errors="*{gameName}" class="error"></span>
+<style>
+    ::-webkit-input-placeholder {
+        text-align: center;
+        }
+</style>
+    </div>
+
+
+    <div class="form-group">
+        <label th:for="snake">Category:</label>
+        <select class="enum"th:field="*{snake}">
+            <option th:each="snake : ${ T(com.launchcode.gamersunite.models.Snake).values()}"
+                    th:text="${snake.name}"
+                    th:value="${snake}"></option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label th:for="description">Description:</label>
+        <textarea class="form-control description"th:field="*{description}"placeholder="Talk about your favorite game!"></textarea>
+        <span th:errors="*{description}" class="error"></span>
+
+    </div>
+<input type="hidden"name="userId"th:value="${userId}">
+<center>
+<input type="submit"value="Create Post"class="brk-btn">
+</center>
+
+</form>
+</div>
+</div>
+<footer th:replace="fragments :: footer"></footer>
+
+</html>
+

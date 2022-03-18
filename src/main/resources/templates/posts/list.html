@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+<h2 th:replace="fragments :: title"></h2>
+<h1 th:text="${title}">Default Title</h1>
+
+
+<div class="container border">
+<h2 th:text="${heading}">Default Heading</h2>
+<i th:unless="${post} and ${post.size()}">No posts yet :( </i>
+
+    <div>
+        <ul>
+            <li th:each="post : ${post}">
+                <a class="post-text" th:href="'/posts/view/' + ${post.id}" th:text="${post.title}"></a></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+   .post-text {
+   color: white;
+   font-size: 20px;
+    word-wrap: break-word;
+   }
+   .post-text:hover{
+   color:white;
+   }
+
+   ul{
+   font-size:15px;
+   color:lime;
+   margin-left:10px;
+   }
+</style>
+<footer th:replace="fragments :: footer"></footer>
+</html>
+

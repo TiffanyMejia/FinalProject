@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+
+<h1 th:text="${title}">Default Title</h1>
+
+<h1 th:text="${heading}">Default Heading</h1>
+<br>
+
+
+<!--<button class="btn btn-primary" style="margin-top: 20px;" onclick="location.href = '@Url.Action(OauthRedirect)'">Events</button>-->
+
+
+<br>
+<section class="container" style="center">
+
+    <div title="Action">
+        <div class="row">
+            <div class="hvr-float-shadow" style="text-align: center">
+                <h2>Action</h2>
+<!--                <a href ="posts/posts-in-category/Action">Action</a>-->
+            </div>
+
+            <div class="pic">
+                <br>
+                <div class=" text2" style="text-align: center">
+
+                    <span class="text1">
+        <ul>
+            <li>
+                <section class="item">Assasin's Creed Series</section>
+            </li>
+            <li>
+                <section class="item">Red Dead Redemption 1 & 2</section>
+            </li>
+            <li>
+                <section class="item">The Tomb Raider Series</section>
+            </li>
+        </ul>
+        </span>
+                </div>
+            </div>
+        </div>
+
+        <div title="Adventure">
+            <div class="row">
+                <div class="hvr-float-shadow" style="text-align: center">
+                    <h2>Adventure</h2>
+                    <a href ="posts/posts-in-category/Adventure"></a>
+                </div>
+
+                <div class="pic" style="text-align: center">
+                    <br>
+                    <div class="text">
+
+
+                        <span class="text1">
+        <ul>
+            <li>
+                <section class="item">Monster Hunter</section>
+            </li>
+            <li>
+                <section class="item">Grand Theft Auto</section>
+            </li>
+
+        </ul>
+</span>
+                    </div>
+                </div>
+            </div>
+
+        <div title="RPG">
+            <div class="row">
+                <div class="section" style="text-align: center">
+                    <h2>RPG</h2>
+                    <a href ="posts/posts-in-category/RPG"></a>
+                </div>
+
+                <div class="pic">
+                    <br>
+                    <div class="text" style="text-align: center">
+
+
+                        <span class="text1">
+        <ul>
+            <li>
+                <section class="item">World of Warcraft</section>
+            </li>
+            <li>
+                <section class="item">League of Legends</section>
+            </li>
+            <li>
+                <section class="item">Elder Scrolls</section>
+            </li>
+            <li>
+                <section class="item">Knights of the Old Republic</section>
+            </li>
+        </ul>
+</span>
+                    </div>
+                </div>
+            </div>
+
+<div title="Simulation">
+    <div class="row">
+    <div class="center hvr-float-shadow" style="text-align: center">
+        <h2>Simulation</h2>
+        <a href ="posts/posts-in-category/Simulation"></a>
+    </div>
+
+        <div class="pic">
+            <br>
+            <div class="text2" style="text-align: center" >
+
+        <span class="text1">
+        <ul>
+            <li>
+                <section class="item">The Sims 1,2,3,&4</section>
+            </li>
+            <li>
+                <section class="item">Civilization</section>
+            </li>
+            <li>
+                <section class="item">Flight Simulator</section>
+            </li>
+        </ul>
+        </span>
+    </div>
+    </div>
+    </div>
+
+    <style>
+   ul{
+   list-style-type:square;
+   font-size:15px;
+   color:lime;
+   display: inline-block;
+   }
+   .item {
+   color: white;
+   }
+    </style>
+
+
+
+</div>
+        </div>
+
+
+</section>
+
+
+<br>
+<br>
+<br>
+
+<footer th:replace="fragments :: footer"></footer>
+
+
+</html>
+

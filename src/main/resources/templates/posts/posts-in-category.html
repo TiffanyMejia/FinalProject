@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<header th:replace="fragments :: header"></header>
+<body th:replace="fragments :: body"></body>
+<h2 th:replace="fragments :: title"></h2>
+<h1 th:text="${title}">Default Title</h1>
+
+<div class="container border">
+    <h2 th:text="${heading}">Default Heading</h2>
+
+    <div>
+        <ul>
+            <li th:each="post : ${post}">
+                <a class="post-text" th:href="'/posts/view/' + ${post.id}" th:text="${post.title}"></a></li>
+        </ul>
+    </div>
+</div>
+
+<footer th:replace="fragments :: footer"></footer>
+</html>
+
